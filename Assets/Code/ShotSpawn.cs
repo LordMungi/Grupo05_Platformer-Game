@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewScriptableObjectScript", menuName = "Scriptable Objects/NewScriptableObjectScript")]
+[CreateAssetMenu(fileName = "ShotSpawn", menuName = "Shots/Spawn")]
 public class ShotSpawn : ScriptableObject
 {
     [field: SerializeField] public Vector2 direction { get; private set; }

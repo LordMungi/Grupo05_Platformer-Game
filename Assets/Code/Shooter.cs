@@ -18,15 +18,16 @@ public class Shooter : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 0.1f)
+        if (timer >= 0.2f)
         {
             foreach (ShotSpawn s in shotPattern.shotSpawns)
             {
                 ShotBehaviour newShot;
-                newShot = Instantiate(shotType);
+                newShot = Instantiate(shotType, transform);
                 newShot.Init(s);
                 _shotsFired.Add(newShot);
             }
+            timer = 0f;
         }
     }
 }
