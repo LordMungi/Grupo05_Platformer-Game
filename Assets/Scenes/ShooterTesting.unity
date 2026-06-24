@@ -225,6 +225,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
   shotPattern: {fileID: 11400000, guid: aeb649ec114481947b1c20ce9192846f, type: 2}
   shotType: {fileID: 5683381259068670746, guid: 63ec68926dd41af418024a06087d4962, type: 3}
+--- !u!1 &687941830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687941832}
+  - component: {fileID: 687941831}
+  m_Layer: 0
+  m_Name: TaskScheduler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &687941831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687941830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb4d68581fed06429a83a4b5494195a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskScheduler
+--- !u!4 &687941832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687941830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00684, y: 0.15463, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064498997
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,3 +412,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2064499000}
   - {fileID: 135696906}
+  - {fileID: 687941832}
