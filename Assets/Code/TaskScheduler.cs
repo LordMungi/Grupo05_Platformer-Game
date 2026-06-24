@@ -12,6 +12,22 @@ public class TaskScheduler : MonoBehaviour
         public ScheduledCall(Action callback, float remainingTime) { this.callback = callback; this.remainingTime = remainingTime; }
     }
 
+    private TaskScheduler() { }
+
+    public static TaskScheduler instance { get; private set; }
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }
+
     List<ScheduledCall> _scheduledCalls;
 
     void Start()
@@ -21,7 +37,7 @@ public class TaskScheduler : MonoBehaviour
 
     void Update()
     {
-        for (int i = _scheduledCalls.Count; i >= 0; i--)
+        for (int i = _scheduledCalls.Count - 1; i >= 0; i--)
         {
             ScheduledCall call = _scheduledCalls[i];
             call.remainingTime -= Time.deltaTime;
