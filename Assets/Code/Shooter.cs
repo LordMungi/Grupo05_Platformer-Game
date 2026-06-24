@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,21 +14,19 @@ public class Shooter : MonoBehaviour
     private void Start()
     {
         _shotsFired = new List<ShotBehaviour>();
+
+        foreach (ShotSpawn s in shotPattern.shotSpawns)
+        {
+            TaskScheduler.instance.Schedule(() => SpawnShot(s), s.rate);
+        }
     }
 
-    private void Update()
+    private void SpawnShot(ShotSpawn s)
     {
-        timer += Time.deltaTime;
-        if (timer >= 0.2f)
-        {
-            foreach (ShotSpawn s in shotPattern.shotSpawns)
-            {
-                ShotBehaviour newShot;
-                newShot = Instantiate(shotType, transform);
-                newShot.Init(s);
-                _shotsFired.Add(newShot);
-            }
-            timer = 0f;
-        }
+        ShotBehaviour newShot;
+        newShot = Instantiate(shotType, transform);
+        newShot.Init(s);
+        _shotsFired.Add(newShot);
+        TaskScheduler.instance.Schedule(() => SpawnShot(s), s.rate);
     }
 }

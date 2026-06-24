@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShotSpawn
   <direction>k__BackingField: {x: -1, y: 0}
   <speed>k__BackingField: 5
-  <rate>k__BackingField: 0
+  <rate>k__BackingField: 0.1
