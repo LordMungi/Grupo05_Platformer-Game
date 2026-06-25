@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskScheduler : MonoBehaviour
+public class TaskScheduler : MonoBehaviour, IService
 {
     public class ScheduledCall
     {
@@ -12,21 +12,7 @@ public class TaskScheduler : MonoBehaviour
         public ScheduledCall(Action callback, float remainingTime) { this.callback = callback; this.remainingTime = remainingTime; }
     }
 
-    private TaskScheduler() { }
-
-    public static TaskScheduler instance { get; private set; }
-
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
-    }
+    public bool isPersistant => false;
 
     List<ScheduledCall> _scheduledCalls;
 
