@@ -13,6 +13,7 @@ namespace Assets.Code.Player
         [SerializeField] private float maxSpeed;
         [SerializeField] private float jumpForce;
         private bool _isMoving;
+        private bool _isGrounded;
         private Rigidbody2D _rb;
         private float _movement;
 
@@ -33,6 +34,12 @@ namespace Assets.Code.Player
         }
 
         private void Jump(InputAction.CallbackContext _) => _rb?.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        private void Jump(InputAction.CallbackContext _)
+        {
+            if (!_isGrounded) return;
+            
+            _rb?.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
 
         private void Stop(InputAction.CallbackContext _) => _isMoving = false;
 
@@ -60,6 +67,16 @@ namespace Assets.Code.Player
             {
                 jump.action.started -= Jump;
             }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Walkable")) _isGrounded = true;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Walkable")) _isGrounded = false;
         }
     }
 }
