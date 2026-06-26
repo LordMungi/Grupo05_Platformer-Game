@@ -1,4 +1,4 @@
 ﻿public interface IService
 {
-    public bool isPersistant { get; }
+    public bool IsPersistant { get; }
 }
