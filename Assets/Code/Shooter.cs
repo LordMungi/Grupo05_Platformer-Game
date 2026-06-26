@@ -9,17 +9,37 @@ public class Shooter : MonoBehaviour
 
     private List<ShotBehaviour> _shotsFired;
 
-    private float timer = 0f;
+    private bool _isShooting = false;
 
     private void Start()
     {
         _shotsFired = new List<ShotBehaviour>();
         ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
+    }
 
-        foreach (ShotSpawn s in ShotPattern.shotSpawns)
+    public void StartShooting()
+    {
+        if (!_isShooting)
         {
-            ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
+            foreach (ShotSpawn s in ShotPattern.shotSpawns)
+            {
+                ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
+            }
         }
+        _isShooting = true;
+    }
+
+    public void StopShooting()
+    {
+        _isShooting = false;
+    }
+
+    public void ToggleShooting()
+    {
+        if (_isShooting)
+            StopShooting();
+        else
+            StartShooting();
     }
 
     private void SpawnShot(ShotSpawn s)
@@ -28,6 +48,8 @@ public class Shooter : MonoBehaviour
         newShot = Instantiate(ShotType, transform);
         newShot.Init(s);
         _shotsFired.Add(newShot);
-        ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
+
+        if (_isShooting)
+            ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
     }
 }
