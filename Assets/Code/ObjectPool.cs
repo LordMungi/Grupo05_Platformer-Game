@@ -15,7 +15,11 @@ public class ObjectPool : MonoBehaviour
             output = _objectPool.Pop();
 
         else
-            output = Instantiate(Object, position, rotation, transform);
+            output = Instantiate(Object, transform);
+
+        output.SetActive(true);
+        output.transform.position = position;
+        output.transform.rotation = rotation;
 
         return output;
     }
