@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] private ShotPattern shotPattern;
-    [SerializeField] private ShotBehaviour shotType;
+    [SerializeField] private ShotPattern ShotPattern;
+    [SerializeField] private ShotBehaviour ShotType;
 
     private List<ShotBehaviour> _shotsFired;
 
@@ -14,19 +14,20 @@ public class Shooter : MonoBehaviour
     private void Start()
     {
         _shotsFired = new List<ShotBehaviour>();
+        ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
 
-        foreach (ShotSpawn s in shotPattern.shotSpawns)
+        foreach (ShotSpawn s in ShotPattern.shotSpawns)
         {
-            TaskScheduler.instance.Schedule(() => SpawnShot(s), s.rate);
+            ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
         }
     }
 
     private void SpawnShot(ShotSpawn s)
     {
         ShotBehaviour newShot;
-        newShot = Instantiate(shotType, transform);
+        newShot = Instantiate(ShotType, transform);
         newShot.Init(s);
         _shotsFired.Add(newShot);
-        TaskScheduler.instance.Schedule(() => SpawnShot(s), s.rate);
+        ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(() => SpawnShot(s), s.Rate);
     }
 }

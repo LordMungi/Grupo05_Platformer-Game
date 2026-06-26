@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89749af8bac637b41aaf4a8606d7c654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
-  shotPattern: {fileID: 11400000, guid: aeb649ec114481947b1c20ce9192846f, type: 2}
-  shotType: {fileID: 5683381259068670746, guid: 63ec68926dd41af418024a06087d4962, type: 3}
+  ShotPattern: {fileID: 11400000, guid: aeb649ec114481947b1c20ce9192846f, type: 2}
+  ShotType: {fileID: 5683381259068670746, guid: 63ec68926dd41af418024a06087d4962, type: 3}
 --- !u!1 &687941830
 GameObject:
   m_ObjectHideFlags: 0
