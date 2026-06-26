@@ -14,12 +14,7 @@ public class TaskScheduler : MonoBehaviour, IService
 
     public bool isPersistant => false;
 
-    List<ScheduledCall> _scheduledCalls;
-
-    void Start()
-    {
-        _scheduledCalls = new List<ScheduledCall>();
-    }
+    List<ScheduledCall> _scheduledCalls = new List<ScheduledCall>();
 
     void Update()
     {

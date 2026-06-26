@@ -19,7 +19,7 @@ public class ServiceProvider
         private set => instance = value;
     }
 
-    private Dictionary<Type, IService> services;
+    private Dictionary<Type, IService> services = new Dictionary<Type, IService>();
 
     public void AddService<ServiceType>(IService service) where ServiceType : class, IService
     {
@@ -27,18 +27,18 @@ public class ServiceProvider
             services.Add(typeof(ServiceType), service);
     }
 
-    public void RemoveService<ServiceType>(IService service) where ServiceType : class, IService
+    public void RemoveService<ServiceType>() where ServiceType : class, IService
     {
         if (services.ContainsKey(typeof(ServiceType)))
             services.Remove(typeof(ServiceType));
     }
 
-    public bool ContainsService<ServiceType>(IService service) where ServiceType : class, IService
+    public bool ContainsService<ServiceType>() where ServiceType : class, IService
     {
         return services.ContainsKey(typeof(ServiceType));
     }
 
-    public ServiceType GetService<ServiceType>(IService service) where ServiceType : class,  IService
+    public ServiceType GetService<ServiceType>() where ServiceType : class,  IService
     {
         return services[typeof(ServiceType)] as ServiceType;
     }
