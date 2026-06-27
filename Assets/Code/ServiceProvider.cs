@@ -5,18 +5,18 @@ public class ServiceProvider
 {
     private ServiceProvider() { }
 
-    private static ServiceProvider instance;
+    private static ServiceProvider _instance;
     public static ServiceProvider Instance
     {
         get
         {
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = new ServiceProvider();
+                _instance = new ServiceProvider();
             }
-            return instance;
+            return _instance;
         }
-        private set => instance = value;
+        private set => _instance = value;
     }
 
     private Dictionary<Type, IService> services = new Dictionary<Type, IService>();
@@ -53,7 +53,7 @@ public class ServiceProvider
         List<Type> nonPersistantServiceTypes = new List<Type>();
         foreach (KeyValuePair<Type, IService> service in services)
         {
-            if (!service.Value.isPersistant)
+            if (!service.Value.IsPersistant)
                 nonPersistantServiceTypes.Add(service.Key);
         }
         foreach (Type keyToRemove in nonPersistantServiceTypes)

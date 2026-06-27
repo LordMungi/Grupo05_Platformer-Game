@@ -6,13 +6,13 @@ public class TaskScheduler : MonoBehaviour, IService
 {
     public class ScheduledCall
     {
-        public Action callback;
-        public float remainingTime;
+        public Action Callback;
+        public float RemainingTime;
 
-        public ScheduledCall(Action callback, float remainingTime) { this.callback = callback; this.remainingTime = remainingTime; }
+        public ScheduledCall(Action callback, float remainingTime) { this.Callback = callback; this.RemainingTime = remainingTime; }
     }
 
-    public bool isPersistant => false;
+    public bool IsPersistant => false;
 
     List<ScheduledCall> _scheduledCalls = new List<ScheduledCall>();
 
@@ -21,11 +21,11 @@ public class TaskScheduler : MonoBehaviour, IService
         for (int i = _scheduledCalls.Count - 1; i >= 0; i--)
         {
             ScheduledCall call = _scheduledCalls[i];
-            call.remainingTime -= Time.deltaTime;
+            call.RemainingTime -= Time.deltaTime;
 
-            if (call.remainingTime <= 0f)
+            if (call.RemainingTime <= 0f)
             {
-                call.callback.Invoke();
+                call.Callback.Invoke();
                 _scheduledCalls.RemoveAt(i);
             }
         }
