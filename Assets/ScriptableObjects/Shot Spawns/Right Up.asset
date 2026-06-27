@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5f6be7f372096a45b39d7b58184ac30, type: 3}
-  m_Name: Left
+  m_Name: Right Up
   m_EditorClassIdentifier: Assembly-CSharp::ShotSpawn
-  <Direction>k__BackingField: {x: -1, y: 0}
+  <Direction>k__BackingField: {x: 0.5, y: 0.5}
   <Speed>k__BackingField: 5
-  <Rate>k__BackingField: 0.1
+  <Rate>k__BackingField: 0.5
   <Lifetime>k__BackingField: 2
