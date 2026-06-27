@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     [SerializeField] private ShotPattern ShotPattern;
     [SerializeField] private ShotBehaviour ShotType;
+    [SerializeField] private Transform BulletParent;
 
     private List<ShotBehaviour> _shotsFired;
 
@@ -45,7 +46,7 @@ public class Shooter : MonoBehaviour
     private void SpawnShot(ShotSpawn s)
     {
         ShotBehaviour newShot;
-        newShot = Instantiate(ShotType, transform);
+        newShot = Instantiate(ShotType, transform.position, transform.rotation, BulletParent);
         newShot.Init(s);
         _shotsFired.Add(newShot);
 
