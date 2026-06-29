@@ -15,7 +15,6 @@ public class Shooter : MonoBehaviour
     private void Start()
     {
         _shotsFired = new List<ShotBehaviour>();
-        ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
     }
 
     public void StartShooting()

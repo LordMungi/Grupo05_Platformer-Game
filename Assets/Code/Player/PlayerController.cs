@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D Body;
     [SerializeField] private SpriteRenderer Renderer;
 
+    [Header("Layers")]
+    [SerializeField] private LayerMask GroundLayer;
+    [SerializeField] private LayerMask DeathLayer;
+
     [Header("Values")]
     [Header("Horizontal Movement")]
     [SerializeField] private float Acceleration;
@@ -24,8 +28,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float RefillRate = 0.5f;
     [SerializeField] private float RefillDelay = 0.2f;
 
+
     [Header("Broadcast Events")]
     [SerializeField] private IntEventChannel PlayerStateChangeEvent;
+    [SerializeField] private EventChannel PlayerDieEvent;
 
     private float _inputDelta;
 
@@ -40,19 +46,15 @@ public class PlayerController : MonoBehaviour
 
     private int _state = 0;
 
-    private LayerMask _groundLayer;
 
     void Start()
     {
-        _groundLayer = LayerMask.GetMask("Ground");
-        ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
-
         _currentFuel = MaxFuel;
     }
 
     private void FixedUpdate()
     {
-        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, GroundedCheckLength,  _groundLayer);
+        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, GroundedCheckLength,  GroundLayer);
 
         Body.AddForce(new Vector2(_inputDelta * Acceleration * Time.fixedDeltaTime, 0));
         Body.linearVelocity = new Vector2(Mathf.Clamp(Body.linearVelocity.x, -MaxSpeed, MaxSpeed), Body.linearVelocity.y);
@@ -138,6 +140,26 @@ public class PlayerController : MonoBehaviour
     private void AllowFly()
     {
         _canFly = true;
+    }
+
+    public void Spawn(Vector2 position)
+    {
+        gameObject.SetActive(true);
+        transform.position = position;
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & DeathLayer) != 0)
+        {
+            Die();
+            PlayerDieEvent.RaiseEvent();
+        }
     }
 
     private void OnDrawGizmos()

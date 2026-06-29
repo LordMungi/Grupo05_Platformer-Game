@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] Animator PlayerAnimationController;
-
-
     [Header("Listener Events")]
     [SerializeField] private IntEventChannel PlayerStateChangeEvent;
+
+    private Animator _animationController;
+
+    private void Start()
+    {
+        _animationController = GetComponent<Animator>();
+    }
+
     private void OnEnable()
     {
         PlayerStateChangeEvent.OnEventTriggered += ChangeState;
@@ -19,6 +24,6 @@ public class PlayerAnimator : MonoBehaviour
 
     private void ChangeState(int arg)
     {
-        PlayerAnimationController.SetInteger("State", arg);
+        _animationController.SetInteger("State", arg);
     }
 }
