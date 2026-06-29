@@ -10,15 +10,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float MaxSpeed;
     [SerializeField] private float JumpForce;
     [SerializeField] private float GroundedCheckLength = 0.1f;
+    [SerializeField] private float JumpBufferLength = 0.1f;
 
     private float _inputDelta;
     private bool _isJump;
-    public bool _isGrounded;
+    private bool _isGrounded;
     private LayerMask _groundLayer;
 
     void Start()
     {
         _groundLayer = LayerMask.GetMask("Ground");
+        ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
     }
 
     private void FixedUpdate()
@@ -44,7 +46,15 @@ public class PlayerController : MonoBehaviour
     {
         _inputDelta = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Jump"))
+        {
             _isJump = true;
+            ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(DequeueJump, JumpBufferLength);
+        }
+    }
+
+    private void DequeueJump()
+    {
+        _isJump = false;
     }
 
     private void OnDrawGizmos()

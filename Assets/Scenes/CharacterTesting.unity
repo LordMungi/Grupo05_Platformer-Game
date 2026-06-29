@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683371486}
   - component: {fileID: 683371488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1308072967}
   - component: {fileID: 1308072966}
   - component: {fileID: 1308072969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,6 @@ MonoBehaviour:
   MaxSpeed: 10
   JumpForce: 10
   GroundedCheckLength: 0.75
-  _isGrounded: 0
 --- !u!50 &1308072967
 Rigidbody2D:
   serializedVersion: 5
