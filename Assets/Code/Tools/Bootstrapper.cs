@@ -23,6 +23,6 @@ public class Bootstrapper : MonoBehaviour
         ServiceProvider.Instance.AddService<CustomSceneManager>(new GameObject("SceneManager").AddComponent<CustomSceneManager>());
         DontDestroyOnLoad(ServiceProvider.Instance.GetService<CustomSceneManager>());
 
-        ServiceProvider.Instance.GetService<CustomSceneManager>().LoadLevel();
+        ServiceProvider.Instance.GetService<CustomSceneManager>().LoadMainMenu();
     }
 }
