@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     [Header("Broadcast Events")]
     [SerializeField] private EventChannel PauseGameEvent;
     [SerializeField] private EventChannel UnpauseGameEvent;
-    [SerializeField] private EventChannel WinGameEvent;
 
     private bool _isPaused = false;
 
