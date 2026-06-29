@@ -382,13 +382,16 @@ MonoBehaviour:
   Body: {fileID: 1308072967}
   Acceleration: 2000
   MaxSpeed: 10
-  JumpForce: 10
   GroundedCheckLength: 0.75
+  JumpForce: 10
   JumpBufferLength: 0.1
+  JetpackForce: 1000
   FlyAfterJumpDelay: 0.1
   MaxFuel: 10
-  FuelConsumption: 3
-  JetpackForce: 1000
+  FuelConsumption: 1
+  RefillRate: 0.5
+  RefillDelay: 2
+  _currentFuel: 0
 --- !u!50 &1308072967
 Rigidbody2D:
   serializedVersion: 5
