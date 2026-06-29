@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Animator PlayerAnimationController;
+
+
+    [Header("Listener Events")]
+    [SerializeField] private IntEventChannel PlayerStateChangeEvent;
+    private void OnEnable()
     {
-        
+        PlayerStateChangeEvent.OnEventTriggered += ChangeState;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        PlayerStateChangeEvent.OnEventTriggered -= ChangeState;
+    }
+
+    private void ChangeState(int arg)
+    {
+        PlayerAnimationController.SetInteger("State", arg);
     }
 }

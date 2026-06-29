@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Rigidbody2D Body;
+    [SerializeField] private SpriteRenderer Renderer;
 
     [Header("Values")]
     [Header("Horizontal Movement")]
@@ -122,6 +123,11 @@ public class PlayerController : MonoBehaviour
         if (_isFly)
             _state = 3;
         PlayerStateChangeEvent.RaiseEvent(_state);
+
+        if (Body.linearVelocity.x < -0.001)
+            Renderer.flipX = true;
+        else if (Body.linearVelocity.x > 0.001)
+            Renderer.flipX = false;
     }
 
     private void DequeueJump()

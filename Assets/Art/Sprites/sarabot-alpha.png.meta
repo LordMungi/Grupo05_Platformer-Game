@@ -157,7 +157,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -171,7 +171,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 44
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -236,12 +236,12 @@ TextureImporter:
       name: sarabot-alpha_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 219
-        width: 27
-        height: 31
+        x: 0
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,12 +258,12 @@ TextureImporter:
       name: sarabot-alpha_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 219
-        width: 28
-        height: 35
+        x: 52
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,12 +280,12 @@ TextureImporter:
       name: sarabot-alpha_2
       rect:
         serializedVersion: 2
-        x: 113
-        y: 219
-        width: 32
-        height: 45
+        x: 104
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: sarabot-alpha_3
       rect:
         serializedVersion: 2
-        x: 166
-        y: 219
-        width: 31
-        height: 31
+        x: 156
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -324,12 +324,12 @@ TextureImporter:
       name: sarabot-alpha_4
       rect:
         serializedVersion: 2
-        x: 219
-        y: 219
-        width: 36
-        height: 31
+        x: 208
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -346,12 +346,12 @@ TextureImporter:
       name: sarabot-alpha_5
       rect:
         serializedVersion: 2
-        x: 271
-        y: 219
-        width: 27
-        height: 31
+        x: 260
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -368,12 +368,12 @@ TextureImporter:
       name: sarabot-alpha_6
       rect:
         serializedVersion: 2
-        x: 311
-        y: 219
-        width: 105
-        height: 45
+        x: 312
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -390,12 +390,12 @@ TextureImporter:
       name: sarabot-alpha_7
       rect:
         serializedVersion: 2
-        x: 7
-        y: 175
-        width: 33
-        height: 30
+        x: 364
+        y: 220
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -412,12 +412,12 @@ TextureImporter:
       name: sarabot-alpha_8
       rect:
         serializedVersion: 2
-        x: 60
-        y: 175
-        width: 33
-        height: 29
+        x: 0
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -434,12 +434,12 @@ TextureImporter:
       name: sarabot-alpha_9
       rect:
         serializedVersion: 2
-        x: 112
-        y: 175
-        width: 34
-        height: 28
+        x: 52
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,12 +456,12 @@ TextureImporter:
       name: sarabot-alpha_10
       rect:
         serializedVersion: 2
-        x: 113
-        y: 131
-        width: 32
-        height: 45
+        x: 104
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -478,12 +478,12 @@ TextureImporter:
       name: sarabot-alpha_11
       rect:
         serializedVersion: 2
-        x: 165
-        y: 175
-        width: 32
-        height: 29
+        x: 156
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -500,12 +500,12 @@ TextureImporter:
       name: sarabot-alpha_12
       rect:
         serializedVersion: 2
-        x: 215
-        y: 175
-        width: 33
-        height: 30
+        x: 208
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -522,12 +522,12 @@ TextureImporter:
       name: sarabot-alpha_13
       rect:
         serializedVersion: 2
-        x: 268
-        y: 175
-        width: 33
-        height: 29
+        x: 260
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -544,12 +544,12 @@ TextureImporter:
       name: sarabot-alpha_14
       rect:
         serializedVersion: 2
-        x: 311
-        y: 131
-        width: 105
-        height: 73
+        x: 312
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -566,12 +566,12 @@ TextureImporter:
       name: sarabot-alpha_15
       rect:
         serializedVersion: 2
-        x: 11
-        y: 131
-        width: 27
-        height: 31
+        x: 364
+        y: 176
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -588,12 +588,12 @@ TextureImporter:
       name: sarabot-alpha_16
       rect:
         serializedVersion: 2
-        x: 63
-        y: 131
-        width: 28
-        height: 35
+        x: 0
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -610,12 +610,12 @@ TextureImporter:
       name: sarabot-alpha_17
       rect:
         serializedVersion: 2
-        x: 166
-        y: 131
-        width: 31
-        height: 31
+        x: 52
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -632,12 +632,12 @@ TextureImporter:
       name: sarabot-alpha_18
       rect:
         serializedVersion: 2
-        x: 219
-        y: 131
-        width: 36
-        height: 31
+        x: 104
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -654,12 +654,12 @@ TextureImporter:
       name: sarabot-alpha_19
       rect:
         serializedVersion: 2
-        x: 271
-        y: 131
-        width: 27
-        height: 31
+        x: 156
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -676,12 +676,12 @@ TextureImporter:
       name: sarabot-alpha_20
       rect:
         serializedVersion: 2
-        x: 7
-        y: 87
-        width: 33
-        height: 30
+        x: 208
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -698,12 +698,12 @@ TextureImporter:
       name: sarabot-alpha_21
       rect:
         serializedVersion: 2
-        x: 60
-        y: 87
-        width: 33
-        height: 29
+        x: 260
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -720,12 +720,12 @@ TextureImporter:
       name: sarabot-alpha_22
       rect:
         serializedVersion: 2
-        x: 112
-        y: 87
-        width: 34
-        height: 28
+        x: 312
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -742,12 +742,12 @@ TextureImporter:
       name: sarabot-alpha_23
       rect:
         serializedVersion: 2
-        x: 113
-        y: 43
-        width: 32
-        height: 45
+        x: 364
+        y: 132
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -764,12 +764,12 @@ TextureImporter:
       name: sarabot-alpha_24
       rect:
         serializedVersion: 2
-        x: 165
-        y: 87
-        width: 32
-        height: 29
+        x: 0
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -786,12 +786,12 @@ TextureImporter:
       name: sarabot-alpha_25
       rect:
         serializedVersion: 2
-        x: 215
-        y: 87
-        width: 33
-        height: 30
+        x: 52
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -808,12 +808,12 @@ TextureImporter:
       name: sarabot-alpha_26
       rect:
         serializedVersion: 2
-        x: 268
-        y: 87
-        width: 33
-        height: 29
+        x: 104
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -830,12 +830,12 @@ TextureImporter:
       name: sarabot-alpha_27
       rect:
         serializedVersion: 2
-        x: 311
-        y: 43
-        width: 105
-        height: 73
+        x: 156
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -852,12 +852,12 @@ TextureImporter:
       name: sarabot-alpha_28
       rect:
         serializedVersion: 2
-        x: 11
-        y: 43
-        width: 27
-        height: 31
+        x: 208
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -874,12 +874,12 @@ TextureImporter:
       name: sarabot-alpha_29
       rect:
         serializedVersion: 2
-        x: 63
-        y: 43
-        width: 28
-        height: 35
+        x: 260
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -896,12 +896,12 @@ TextureImporter:
       name: sarabot-alpha_30
       rect:
         serializedVersion: 2
-        x: 166
-        y: 43
-        width: 31
-        height: 31
+        x: 312
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -918,12 +918,12 @@ TextureImporter:
       name: sarabot-alpha_31
       rect:
         serializedVersion: 2
-        x: 219
-        y: 43
-        width: 36
-        height: 31
+        x: 364
+        y: 88
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -940,12 +940,12 @@ TextureImporter:
       name: sarabot-alpha_32
       rect:
         serializedVersion: 2
-        x: 271
-        y: 43
-        width: 27
-        height: 31
+        x: 0
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -962,12 +962,12 @@ TextureImporter:
       name: sarabot-alpha_33
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 33
-        height: 29
+        x: 52
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -984,12 +984,12 @@ TextureImporter:
       name: sarabot-alpha_34
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 33
-        height: 28
+        x: 104
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1006,12 +1006,12 @@ TextureImporter:
       name: sarabot-alpha_35
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
-        width: 34
-        height: 27
+        x: 156
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1028,12 +1028,12 @@ TextureImporter:
       name: sarabot-alpha_36
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 32
-        height: 28
+        x: 208
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1050,12 +1050,12 @@ TextureImporter:
       name: sarabot-alpha_37
       rect:
         serializedVersion: 2
-        x: 215
-        y: 0
-        width: 33
-        height: 29
+        x: 260
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1072,12 +1072,12 @@ TextureImporter:
       name: sarabot-alpha_38
       rect:
         serializedVersion: 2
-        x: 268
-        y: 0
-        width: 33
-        height: 28
+        x: 312
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1094,12 +1094,12 @@ TextureImporter:
       name: sarabot-alpha_39
       rect:
         serializedVersion: 2
-        x: 319
-        y: 0
-        width: 34
-        height: 27
+        x: 364
+        y: 44
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1116,12 +1116,12 @@ TextureImporter:
       name: sarabot-alpha_40
       rect:
         serializedVersion: 2
-        x: 373
+        x: 0
         y: 0
-        width: 30
-        height: 28
+        width: 52
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1134,11 +1134,165 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_41
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccea4032a7aaa174caa3bcee8fa8d46b
+      internalID: -1240177502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_42
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efe6807dd116264d94e63e4a66bbeb5
+      internalID: -1463052829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_43
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17f3e43829063048960ca11698a8f2c
+      internalID: -833768396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2a0303ce2377e4a88e9d308fe905df
+      internalID: 1710131196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_45
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92341a4dc32eaf46bc49a04040dcbb4
+      internalID: -914556129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_46
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad87309be578d2a47b6ab7c19088bc3c
+      internalID: -332032538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sarabot-alpha_47
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7ebb0281e33e4448a763ca97268d20
+      internalID: -2000299584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 53f0ea16dd6572744b3dafb6d3cc532a
     internalID: 0
     vertices: []
     indices: 
@@ -1146,7 +1300,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":52.0,"y":44.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       sarabot-alpha_0: 3503957786028992175
       sarabot-alpha_1: -6807145027512874097
@@ -1184,6 +1340,13 @@ TextureImporter:
       sarabot-alpha_39: -8190899455924346194
       sarabot-alpha_4: -4094794245099047379
       sarabot-alpha_40: 2838616773086684548
+      sarabot-alpha_41: -1240177502
+      sarabot-alpha_42: -1463052829
+      sarabot-alpha_43: -833768396
+      sarabot-alpha_44: 1710131196
+      sarabot-alpha_45: -914556129
+      sarabot-alpha_46: -332032538
+      sarabot-alpha_47: -2000299584
       sarabot-alpha_5: -4914938032014764450
       sarabot-alpha_6: 5384588714042610389
       sarabot-alpha_7: 5818962527734490360
