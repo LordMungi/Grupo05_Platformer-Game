@@ -428,7 +428,7 @@ MonoBehaviour:
   Body: {fileID: 1308072967}
   Acceleration: 2000
   MaxSpeed: 10
-  JumpForce: 0
+  JumpForce: 600
 --- !u!50 &1308072967
 Rigidbody2D:
   serializedVersion: 5
