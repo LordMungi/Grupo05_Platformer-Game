@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float RefillDelay = 0.2f;
 
     [Header("Broadcast Events")]
-
+    [SerializeField] private IntEventChannel PlayerStateChangeEvent;
 
     private float _inputDelta;
 
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private float _refillTimer;
 
-    private int _state;
+    private int _state = 0;
 
     private LayerMask _groundLayer;
 
@@ -113,6 +113,15 @@ public class PlayerController : MonoBehaviour
         {
             _currentFuel = Mathf.Min(MaxFuel, _currentFuel + RefillRate * Time.fixedDeltaTime);
         }
+
+        _state = 0;
+        if (_inputDelta != 0)
+            _state = 1;
+        if (!_isGrounded)
+            _state = 2;
+        if (_isFly)
+            _state = 3;
+        PlayerStateChangeEvent.RaiseEvent(_state);
     }
 
     private void DequeueJump()
