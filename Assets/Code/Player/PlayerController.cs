@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     [Header("Broadcast Events")]
     [SerializeField] private IntEventChannel PlayerStateChangeEvent;
     [SerializeField] private EventChannel PlayerDieEvent;
+    [SerializeField] private FloatEventChannel UpdateFuelBarEvent;
 
     private float _inputDelta;
 
@@ -111,10 +112,12 @@ public class PlayerController : MonoBehaviour
         {
             _currentFuel = Mathf.Max(0, _currentFuel - FuelConsumption * Time.deltaTime);
             _refillTimer = 0;
+            UpdateFuelBarEvent.RaiseEvent(Mathf.InverseLerp(0, MaxFuel, _currentFuel));
         }
         else if (_refillTimer >= RefillDelay)
         {
             _currentFuel = Mathf.Min(MaxFuel, _currentFuel + RefillRate * Time.fixedDeltaTime);
+            UpdateFuelBarEvent.RaiseEvent(Mathf.InverseLerp(0, MaxFuel, _currentFuel));
         }
 
         _state = 0;
