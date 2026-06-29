@@ -4,13 +4,14 @@ public class GameManager : MonoBehaviour
 {
     [Header("Elements")]
     [SerializeField] private PlayerController Player;
-    [SerializeField] private Transform[] Checkpoints;
+    [SerializeField] private Transform Checkpoint;
 
     [Header("Values")]
     [SerializeField] private float PlayerReviveDelay = 1f;
 
     [Header("Listener Events")]
     [SerializeField] private EventChannel PlayerDeathEvent;
+    [SerializeField] private TransformEventChannel CheckpointReachedEvent;
 
     private void Awake()
     {
@@ -20,10 +21,12 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerDeathEvent.OnEventTriggered += OnPlayerDeath;
+        CheckpointReachedEvent.OnEventTriggered += SetCheckpoint;
     }
     private void OnDisable()
     {
         PlayerDeathEvent.OnEventTriggered -= OnPlayerDeath;
+        CheckpointReachedEvent.OnEventTriggered -= SetCheckpoint;
     }
 
     private void OnPlayerDeath()
@@ -33,6 +36,11 @@ public class GameManager : MonoBehaviour
 
     private void RevivePlayer()
     {
-        Player.Spawn(Checkpoints[0].position);
+        Player.Spawn(Checkpoint.position);
+    }
+
+    private void SetCheckpoint(Transform c)
+    {
+        Checkpoint = c;
     }
 }
