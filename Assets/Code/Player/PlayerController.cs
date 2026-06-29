@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 _isJump = false;
             }
         }
-        else if (_isFly)
+        if (_isFly)
         {
             if (_currentFuel > 0)
             {
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(DequeueJump, JumpBufferLength);
                 ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(AllowFly, FlyAfterJumpDelay);
             }
-            else if (_canFly)
+            if (_canFly)
             {
                 _isFly = true;
             }
