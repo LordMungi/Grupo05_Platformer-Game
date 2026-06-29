@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float RefillRate = 0.5f;
     [SerializeField] private float RefillDelay = 0.2f;
 
+    [Header("Broadcast Events")]
+
+
     private float _inputDelta;
 
     private bool _isJump;
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public float _currentFuel;
 
     private float _refillTimer;
+
+    private int _state;
 
     private LayerMask _groundLayer;
 
