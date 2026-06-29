@@ -49,8 +49,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        ServiceProvider.Instance.AddService<TaskScheduler>(new GameObject("TaskScheduler").AddComponent<TaskScheduler>());
-
         _currentFuel = MaxFuel;
     }
 
