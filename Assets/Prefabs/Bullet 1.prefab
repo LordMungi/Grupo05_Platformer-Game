@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7529183179877432841}
   - component: {fileID: 5683381259068670746}
+  - component: {fileID: 3737848969860627936}
   m_Layer: 0
   m_Name: Bullet 1
   m_TagString: Untagged
@@ -45,6 +46,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981a7c870e5994b42956c7f0ded9e347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShotBehaviour
+--- !u!58 &3737848969860627936
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885694859532386432}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.084741235
 --- !u!1 &6352920581318194881
 GameObject:
   m_ObjectHideFlags: 0
