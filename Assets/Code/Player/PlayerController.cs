@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Rigidbody2D Body;
+    [SerializeField] private SpriteRenderer Renderer;
 
     [Header("Values")]
     [Header("Horizontal Movement")]
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float RefillRate = 0.5f;
     [SerializeField] private float RefillDelay = 0.2f;
 
+    [Header("Broadcast Events")]
+    [SerializeField] private IntEventChannel PlayerStateChangeEvent;
+
     private float _inputDelta;
 
     private bool _isJump;
@@ -33,6 +37,8 @@ public class PlayerController : MonoBehaviour
     public float _currentFuel;
 
     private float _refillTimer;
+
+    private int _state = 0;
 
     private LayerMask _groundLayer;
 
@@ -63,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 _isJump = false;
             }
         }
-        else if (_isFly)
+        if (_isFly)
         {
             if (_currentFuel > 0)
             {
@@ -87,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(DequeueJump, JumpBufferLength);
                 ServiceProvider.Instance.GetService<TaskScheduler>().Schedule(AllowFly, FlyAfterJumpDelay);
             }
-            else if (_canFly)
+            if (_canFly)
             {
                 _isFly = true;
             }
@@ -108,6 +114,20 @@ public class PlayerController : MonoBehaviour
         {
             _currentFuel = Mathf.Min(MaxFuel, _currentFuel + RefillRate * Time.fixedDeltaTime);
         }
+
+        _state = 0;
+        if (_inputDelta != 0)
+            _state = 1;
+        if (!_isGrounded)
+            _state = 2;
+        if (_isFly)
+            _state = 3;
+        PlayerStateChangeEvent.RaiseEvent(_state);
+
+        if (Body.linearVelocity.x < -0.001)
+            Renderer.flipX = true;
+        else if (Body.linearVelocity.x > 0.001)
+            Renderer.flipX = false;
     }
 
     private void DequeueJump()
