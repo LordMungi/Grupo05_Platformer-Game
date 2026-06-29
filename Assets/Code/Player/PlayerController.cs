@@ -162,6 +162,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & DeathLayer) != 0)
+        {
+            Die();
+            PlayerDieEvent.RaiseEvent();
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
